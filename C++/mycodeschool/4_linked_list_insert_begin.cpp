@@ -1,4 +1,4 @@
-// Linked List : Inserting a noed at beginning
+// Linked List : Inserting a node at beginning
 
 #include <iostream>
 
@@ -9,7 +9,7 @@ struct Node {
 	Node* next;
 };
 
-// Node¿¡ ´ëÇÑ Æ÷ÀÎÅÍ ¸¸µé±â
+// Nodeì— ëŒ€í•œ í¬ì¸í„° ë§Œë“¤ê¸°
 Node* head;
 
 void Insert(int x) {
@@ -30,7 +30,7 @@ void Print() {
 }
 
 int main() {
-	// empty list ¸¸µé±â
+	// empty list ë§Œë“¤ê¸°
 	head = NULL;
 	cout << "How many numbers?\n";
 	int n, x;
@@ -44,7 +44,7 @@ int main() {
 }
 
 //int main() {
-//	// empty list ¸¸µé±â
+//	// empty list ë§Œë“¤ê¸°
 //	head = NULL;
 //	cout << "How many numbers?\n";
 //	int n, x;
@@ -56,19 +56,19 @@ int main() {
 //		Print();
 //	}
 //
-//	//  Ã¹¹øÂ° ³ëµå Ãß°¡
+//	//  ì²«ë²ˆì§¸ ë…¸ë“œ ì¶”ê°€
 //	Node* temp = new Node();
 //
-//	temp->data = 2; // (*temp).data = 2¿Í °°Àº Ç¥Çö
+//	temp->data = 2; // (*temp).data = 2ì™€ ê°™ì€ í‘œí˜„
 //	temp->next = NULL;
 //	head = temp;
 //
-//	// »õ ³ëµå »ı¼º, temp´Â »õ ³ëµåÀÇ ÁÖ¼Ò¸¦ ÀúÀåÇÔ
+//	// ìƒˆ ë…¸ë“œ ìƒì„±, tempëŠ” ìƒˆ ë…¸ë“œì˜ ì£¼ì†Œë¥¼ ì €ì¥í•¨
 //	temp = new Node();
 //	temp->data = 4;
 //	temp->next = NULL;
 //
-//	// Traversal(¼øÈ¸)
+//	// Traversal(ìˆœíšŒ)
 //	Node* temp1 = A;
 //	while (temp1->next != NULL) {
 //		temp1 = temp1->next;
