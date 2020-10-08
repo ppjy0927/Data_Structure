@@ -1,3 +1,4 @@
+// Reverse a linked list using recursion
 #include <iostream>
 
 using namespace std;
@@ -15,10 +16,10 @@ void Reverse(Node* p) {
 		return;
 	}
 	Reverse(p->next);
-	// Àç±Í È£Ãâ ÈÄ, ±× ´ÙÀ½ ³ëµå¸¦ reverseÇÏ´Â °Í
+	// ìž¬ê·€ í˜¸ì¶œ í›„, ê·¸ ë‹¤ìŒ ë…¸ë“œë¥¼ reverseí•˜ëŠ” ê²ƒ
 	Node* q = p->next;
 	q->next = p;
-	// À§ÀÇ µÎÁÙÀ» p->next->next = p·Î ³ªÅ¸³¾ ¼ö ÀÖÀ½
+	// ìœ„ì˜ ë‘ì¤„ì„ p->next->next = pë¡œ ë‚˜íƒ€ë‚¼ ìˆ˜ ìžˆìŒ
 	p->next = NULL;
 }
 
