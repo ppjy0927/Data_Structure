@@ -3,20 +3,20 @@
 using namespace std;
 
 struct Node {
-	int data; // µ¥ÀÌÅÍ ÀúÀå
-	struct Node* next; // ´ÙÀ½ nodeÀÇ ÁÖ¼Ò ÀúÀå
+	int data; // ë°ì´í„° ì €ì¥
+	struct Node* next; // ë‹¤ìŒ nodeì˜ ì£¼ì†Œ ì €ì¥
 };
 
 struct Node* front = NULL;
 struct Node* rear = NULL;
 
 void Enqueue(int x) {
-	// 'ÁÖ¼Ò¸¦ ÀúÀåÇÒ Æ÷ÀÎÅÍ' = new 'ÇÒ´çÇÏ°í ½ÍÀº Å©±âÀÇ ÀÚ·áÇü';
-	// node »ı¼º / temp´Â enqueueÇÒ node¸¦ °¡¸£Å°´Â ÁÖ¼Ò
-	struct Node* temp = new (struct Node);
+	// 'ì£¼ì†Œë¥¼ ì €ì¥í•  í¬ì¸í„°' = new 'í• ë‹¹í•˜ê³  ì‹¶ì€ í¬ê¸°ì˜ ìë£Œí˜•';
+	// node ìƒì„± / tempëŠ” enqueueí•  nodeë¥¼ ê°€ë¥´í‚¤ëŠ” ì£¼ì†Œ
+	struct Node* temp = new Node;
 	temp->data = x;
 	temp->next = NULL;
-	// queue¿¡ element°¡ ¾øÀ¸¸é
+	// queueì— elementê°€ ì—†ìœ¼ë©´
 	if (front == NULL && rear == NULL) {
 		front = rear = temp;
 		return;
@@ -26,7 +26,7 @@ void Enqueue(int x) {
 }
 
 void Dequeue() {
-	// node¿¡ ´ëÇÑ Æ÷ÀÎÅÍ, ¾Õ ÁÖ¼Ò¸¦ ÀúÀåÇÔ
+	// nodeì— ëŒ€í•œ í¬ì¸í„°, ì• ì£¼ì†Œë¥¼ ì €ì¥í•¨
 	struct Node* temp = front;
 	if (front == NULL) return;
 	if (front == rear) {
