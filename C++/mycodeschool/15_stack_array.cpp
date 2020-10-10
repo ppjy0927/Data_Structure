@@ -1,3 +1,4 @@
+// Array implementation of stacks
 #include <iostream>
 #define MAX_SIZE 101
 
