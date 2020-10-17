@@ -14,21 +14,15 @@ public:
 	// We are assuming that for an empty Queue, both front and rear will be -1.
 	Queue()
 	{
-		front = -1;
-		rear = -1;
+		front = -1; // 빈 큐 만들기
+		rear = -1; // 둘 다 -1 이면 빈 큐
 	}
 
-	// To check wheter Queue is empty or not
-	bool IsEmpty()
-	{
-		return (front == -1 && rear == -1);
-	}
+	// To check whether Queue is empty or not
+	bool IsEmpty() { return (front == -1 && rear == -1); }
 
 	// To check whether Queue is full or not
-	bool IsFull()
-	{
-		return (rear + 1) % MAX_SIZE == front ? true : false;
-	}
+	bool IsFull() { return (rear + 1) % MAX_SIZE == front ? true : false; }
 
 	// Inserts an element in queue at rear end
 	void Enqueue(int x)
@@ -45,7 +39,7 @@ public:
 		}
 		else
 		{
-			rear = (rear + 1) % MAX_SIZE;
+			rear = (rear + 1) % MAX_SIZE; // circular queue : 남는 자리를 사용하기 위해
 		}
 		A[rear] = x;
 	}
@@ -65,13 +59,13 @@ public:
 		}
 		else
 		{
-			front = (front + 1) % MAX_SIZE;
+			front = (front + 1) % MAX_SIZE; // circular queue
 		}
 	}
 	// Returns element at front of queue. 
 	int Front()
 	{
-		if (front == -1)
+		if (front == -1) // queue 가 비어있을 때 
 		{
 			cout << "Error: cannot return front from empty queue\n";
 			return -1;
@@ -105,6 +99,6 @@ int main()
 	Q.Enqueue(2);  Q.Print();
 	Q.Enqueue(4);  Q.Print();
 	Q.Enqueue(6);  Q.Print();
-	Q.Dequeue();	  Q.Print();
+	Q.Dequeue();	Q.Print();
 	Q.Enqueue(8);  Q.Print();
 }
